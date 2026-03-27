@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="07158b75-2a94-4bee-a00d-7143ea0d4d97" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.gitattributes" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mvnw" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mvnw.cmd" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yogesh/smart_expense_tracker/SmartExpenseTrackerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/yogesh/smart_expense_tracker/SmartExpenseTrackerApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yogesh/smart_expense_tracker/controller/ExpenseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/yogesh/smart_expense_tracker/controller/ExpenseController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yogesh/smart_expense_tracker/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/yogesh/smart_expense_tracker/model/Expense.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yogesh/smart_expense_tracker/repository/ExpenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/yogesh/smart_expense_tracker/repository/ExpenseRepository.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/yogesh/smart_expense_tracker/service/ExpenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/yogesh/smart_expense_tracker/service/ExpenseService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/yogesh/smart_expense_tracker/SmartExpenseTrackerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/test/java/com/yogesh/smart_expense_tracker/SmartExpenseTrackerApplicationTests.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="3BU4CgtbYDuc2OLhYMBbRtZb4R4" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.SmartExpenseTrackerApplication.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "backend/move",
+    "ignore.virus.scanning.warn.message": "true",
+    "kotlin-language-version-configured": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Yogesh Royal\OneDrive\Desktop\smart-expense-tracker\Backend" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="07158b75-2a94-4bee-a00d-7143ea0d4d97" name="Changes" comment="" />
+      <created>1774530189837</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1774530189837</updated>
+    </task>
+    <servers />
+  </component>
+</project>
