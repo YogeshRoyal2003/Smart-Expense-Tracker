@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="07158b75-2a94-4bee-a00d-7143ea0d4d97" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitattributes" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.gitattributes" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mvnw" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/mvnw.cmd" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yogesh/smart_expense_tracker/SmartExpenseTrackerApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/yogesh/smart_expense_tracker/SmartExpenseTrackerApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yogesh/smart_expense_tracker/controller/ExpenseController.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/yogesh/smart_expense_tracker/controller/ExpenseController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yogesh/smart_expense_tracker/model/Expense.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/yogesh/smart_expense_tracker/model/Expense.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yogesh/smart_expense_tracker/repository/ExpenseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/yogesh/smart_expense_tracker/repository/ExpenseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/yogesh/smart_expense_tracker/service/ExpenseService.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/java/com/yogesh/smart_expense_tracker/service/ExpenseService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/main/resources/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/yogesh/smart_expense_tracker/SmartExpenseTrackerApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/Backend/src/test/java/com/yogesh/smart_expense_tracker/SmartExpenseTrackerApplicationTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="07158b75-2a94-4bee-a00d-7143ea0d4d97" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -41,9 +27,9 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 5
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
   <component name="ProjectId" id="3BU4CgtbYDuc2OLhYMBbRtZb4R4" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -53,7 +39,7 @@
   "keyToString": {
     "Application.SmartExpenseTrackerApplication.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "backend/move",
+    "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
     "kotlin-language-version-configured": "true"
   }
