@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import API from "../services/api";
 import ExpenseChart from "../components/ExpenseChart"; 
+import * as XLSX from "xlsx";
+import { saveAs } from "file-saver";
+import { useNavigate } from "react-router-dom";
 
 function Dashboard() {
   const [expenses, setExpenses] = useState([]);
@@ -11,12 +14,40 @@ function Dashboard() {
     date: ""
   });
 
+  const [search, setSearch] = useState("");
+
+
+  // const fetchExpenses = async () => {
+  //   const res = await API.get();
+  //   setExpenses(res.data);
+  // };
+
+  const navigate = useNavigate();
+  // const user = JSON.parse(localStorage.getItem("user"));
+  
+  // useEffect(() => {
+  //   if (!user) {
+  //     navigate("/");  // redirect to login if not logged in
+  //     return;
+  //   }
+  //   fetchExpenses();
+  // }, []);
+  const token = localStorage.getItem("token");
+
   useEffect(() => {
+    if (!token) {
+      navigate("/");
+      return;
+    }
     fetchExpenses();
   }, []);
 
+  
+
   const fetchExpenses = async () => {
-    const res = await API.get();
+    // if (!user) return;
+    // const res = await API.get(`/expenses/user/${user.id}`);
+    const res = await API.get("/expenses");
     setExpenses(res.data);
   };
 
@@ -25,17 +56,54 @@ function Dashboard() {
   };
 
   const addExpense = async () => {
-    await API.post("", form);
+  const expenseData = {
+  title: form.title,
+  amount: form.amount,
+  category: form.category,
+  date: form.date
+  };
+  await API.post("/expenses", expenseData);
     fetchExpenses();
     setForm({ title: "", amount: "", category: "", date: "" });
   };
 
   const deleteExpense = async (id) => {
-    await API.delete(`/${id}`);
+    await API.delete(`/expenses/${id}`);
     fetchExpenses();
   };
 
+  const deleteAll = async () => {
+  // await API.delete(`/expenses/user/${user.id}`);
+  await API.delete("/expenses/all");
+  fetchExpenses();
+  };
+
+
+
+  const downloadExcel = () => {
+    const worksheet = XLSX.utils.json_to_sheet(expenses);
+    const workbook = XLSX.utils.book_new();
+
+    XLSX.utils.book_append_sheet(workbook, worksheet, "Expenses");
+
+    const excelBuffer = XLSX.write(workbook, {
+      bookType: "xlsx",
+      type: "array"
+    });
+
+    const blob = new Blob([excelBuffer], {
+      type: "application/octet-stream"
+    });
+
+    saveAs(blob, "expenses.xlsx");
+  };
+
   const total = expenses.reduce((sum, e) => sum + e.amount, 0);
+
+  const filteredExpenses = expenses.filter(e =>
+  e.title.toLowerCase().includes(search.toLowerCase())
+);
+
 
   return (
     <div className="min-h-screen bg-gray-100 p-6">
@@ -56,6 +124,10 @@ function Dashboard() {
         >
           Add Expense
         </button>
+        <input
+          placeholder="Search..."
+          onChange={(e) => setSearch(e.target.value)}
+        />
       </div>
 
       <div className="bg-green-500 text-white p-4 rounded-xl mb-4 text-center">
@@ -66,6 +138,20 @@ function Dashboard() {
 
       {/* TABLE */}
       <div className="bg-white shadow-md rounded-xl p-4">
+            <div className="flex justify-end mb-3 gap-2">
+        <button
+          onClick={downloadExcel}
+          className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700"
+        >
+          📥 Download Excel
+        </button>
+        <button
+          onClick={deleteAll}
+          className="bg-red-600 text-white px-4 py-2 rounded hover:bg-red-700"
+        >
+          🗑️ Delete All
+        </button>
+      </div>
         <table className="w-full text-left">
           <thead>
             <tr className="border-b">
@@ -78,7 +164,7 @@ function Dashboard() {
           </thead>
 
           <tbody>
-            {expenses.map((e) => (
+            {filteredExpenses.map((e) => (
               <tr key={e.id} className="border-b">
                 <td>{e.title}</td>
                 <td>₹{e.amount}</td>

@@ -47,4 +47,16 @@ public class ExpenseService {
                 .mapToDouble(Expense::getAmount)
                 .sum();
     }
+
+    public List<Expense> getUserExpenses(Long userId) {
+        return repository.findByUserId(userId);
+    }
+
+//    public void deleteAll() {
+//        repository.deleteAll();
+//    }
+
+    public void deleteByUserId(Long userId) {
+        repository.deleteAll(repository.findByUserId(userId));
+    }
 }
