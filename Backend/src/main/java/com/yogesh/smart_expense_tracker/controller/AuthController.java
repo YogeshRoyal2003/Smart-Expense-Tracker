@@ -6,6 +6,7 @@ import com.yogesh.smart_expense_tracker.repository.UserRepository;
 import com.yogesh.smart_expense_tracker.security.JwtUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.http.ResponseEntity;
 
 @RestController
 @RequestMapping("/api/auth")
@@ -19,21 +20,32 @@ public class AuthController {
 //    private ExpenseRepository repository;
 
     @PostMapping("/register")
-    public User register(@RequestBody User user) {
-        return userRepository.save(user);
+    public ResponseEntity<?> register(@RequestBody User user) {
+
+        if (userRepository.findByEmail(user.getEmail()).isPresent()) {
+            return ResponseEntity.badRequest().body("Email already exists");
+        }
+
+        return ResponseEntity.ok(userRepository.save(user));
     }
 
     @PostMapping("/login")
-    public String login(@RequestBody User user) {
+    public ResponseEntity<?> login(@RequestBody User user) {
 
         User existingUser = userRepository.findByEmail(user.getEmail())
-                .orElseThrow(() -> new RuntimeException("User not found"));
+                .orElse(null);
 
-        if (!existingUser.getPassword().equals(user.getPassword())) {
-            throw new RuntimeException("Invalid password");
+        if (existingUser == null) {
+            return ResponseEntity.status(404).body("User not found");
         }
 
-        return JwtUtil.generateToken(existingUser.getEmail());
+        if (!existingUser.getPassword().equals(user.getPassword())) {
+            return ResponseEntity.status(401).body("Invalid password");
+        }
+
+        String token = JwtUtil.generateToken(existingUser.getEmail());
+
+        return ResponseEntity.ok(token);
     }
 
 //    @DeleteMapping("/user/{userId}")
