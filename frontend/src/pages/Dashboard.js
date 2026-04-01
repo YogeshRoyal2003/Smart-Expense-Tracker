@@ -40,7 +40,7 @@ function Dashboard() {
       return;
     }
     fetchExpenses();
-  }, []);
+  }, [navigate, token]);
 
   
 
