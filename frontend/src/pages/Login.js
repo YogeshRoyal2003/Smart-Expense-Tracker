@@ -11,7 +11,7 @@ function Login() {
   };
 
   const login = async () => {
-    const res = await API.post("api/auth/login", form);
+    const res = await API.post("/auth/login", form);
     localStorage.setItem("token", res.data);
     localStorage.setItem("user", JSON.stringify(res.data));
     navigate("/dashboard");
