@@ -2,7 +2,7 @@ import axios from "axios";
 
 const API = axios.create({
   // baseURL: "http://localhost:8080/api/expenses"
-  baseURL: "http://localhost:8080/api"
+  baseURL: "https://smart-expense-tracker-bakend.onrender.com"
 });
 
 API.interceptors.request.use((req) => {
