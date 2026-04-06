@@ -3,7 +3,7 @@
 A modern, intuitive, and powerful expense‑tracking application designed to help users take full control of their financial life — built with clean architecture, scalable backend, and beautiful UI.
 
 🔗 Live Demo
-https://smart-expense-tracker-9gvd-hfkxk9acb-yogeshroyal2003s-projects.vercel.app/
+https://smart-expense-tracker-chi-five.vercel.app/
 * Before Starting the live demo from above link make sure backend is online by opening the following link first:(Don't worry even if this doesn't load anything, just make sure it is online!)
 https://smart-expense-tracker-bakend.onrender.com/
 * For checking out the website please use these credentials(Just making sure that DB is not getting Overloaded!! :) ) :
