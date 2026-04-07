@@ -74,11 +74,17 @@ server.port=${PORT:8080}
   
 🌟 How It Works
 
+
 * User signs up and logs in
 * They add expenses with title, amount, category & date
 * Backend stores the data securely
 * Dashboard visualizes spending trends
 * Users can edit or delete transactions anytime
+
+🌟 Screenshots
+![IMG_0018](https://github.com/user-attachments/assets/097ce01a-1f74-4cbc-b3e6-668262726dca)
+
+![IMG_0017](https://github.com/user-attachments/assets/35c34e7a-737d-49d2-b47c-1ffaa373f7a1)
 
 
 📬 Contact
