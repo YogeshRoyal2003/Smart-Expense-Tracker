@@ -1,4 +1,4 @@
-🧾 Smart Expense Tracker
+🧾 Smart Expense Tracker 
 
 A modern, intuitive, and powerful expense‑tracking application designed to help users take full control of their financial life — built with clean architecture, scalable backend, and beautiful UI.
 
