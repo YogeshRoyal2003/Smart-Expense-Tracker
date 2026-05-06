@@ -9,7 +9,25 @@ import {
 
 ChartJS.register(ArcElement, Tooltip, Legend);
 
+const generateColors = (num) => {
+  const colors = [];
+  for (let i = 0; i < num; i++) {
+    // This generates distinct colors based on the number of categories
+    colors.push(`hsl(${(i * 360) / num}, 70%, 60%)`);
+  }
+  return colors;
+};
+
+
 function ExpenseChart({ expenses }) {
+
+    if (!expenses || expenses.length === 0) {
+    return (
+      <div className="bg-white p-6 rounded-xl shadow-md mt-6 text-center">
+        <p className="text-gray-500">No data available to display chart.</p>
+      </div>
+    );
+  }
 
   const categoryTotals = {};
 
@@ -18,18 +36,15 @@ function ExpenseChart({ expenses }) {
       (categoryTotals[e.category] || 0) + e.amount;
   });
 
+  const categories = Object.keys(categoryTotals);
+
   const data = {
-    labels: Object.keys(categoryTotals),
+    labels: categories,
     datasets: [
       {
         data: Object.values(categoryTotals),
-        backgroundColor: [
-          "#FF6384",
-          "#36A2EB",
-          "#FFCE56",
-          "#4CAF50",
-          "#9C27B0"
-        ]
+        backgroundColor: generateColors(categories.length),
+        borderWidth: 1,
       }
     ]
   };
